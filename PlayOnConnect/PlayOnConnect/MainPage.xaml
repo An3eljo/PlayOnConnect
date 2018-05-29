@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PlayOnConnect"
+             x:Class="PlayOnConnect.MainPage">
+
+	<Grid>
+        <WebView Source="https://connect.deezer.com/oauth/auth.php?app_id=281382&amp;redirect_uri=http://ashiföoagogaaöfhägöafäa.com&amp;perms=basic_access,email" HorizontalOptions="Center" VerticalOptions="Center" Navigating="WebView_OnNavigating" HeightRequest="500" WidthRequest="200"></WebView>
+    </Grid>
+
+</ContentPage>
