@@ -5,7 +5,32 @@
              x:Class="PlayOnConnect.MainPage">
 
 	<Grid>
-        <WebView Source="https://connect.deezer.com/oauth/auth.php?app_id=281382&amp;redirect_uri=http://ashiföoagogaaöfhägöafäa.com&amp;perms=basic_access,email" HorizontalOptions="Center" VerticalOptions="Center" Navigating="WebView_OnNavigating" HeightRequest="500" WidthRequest="200"></WebView>
+	    <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <BoxView Grid.Column="0" Color="Blue"/>
+	    <Label Text="DeezerPlayer created by ©Andri Joos" FontSize="16" TextColor="White" Grid.Row="0" VerticalOptions="Center"/>
+
+        <Grid Grid.Row="1">
+            <Grid x:Name="GridAuth">
+                <WebView Source="https://connect.deezer.com/oauth/auth.php?
+                     app_id=281382&amp;redirect_uri=http://fsgfiewsgidgisgdhgodgsohdogugdhsodgdenchiuehwiugiushdgusdghoudgouewioughosough.com&amp;
+                     perms=basic_access,email,offline_access,manage_library,manage_community,delete_library,
+                     listening_history" HorizontalOptions="Center" VerticalOptions="Center" 
+                         Navigating="WebView_OnNavigating" HeightRequest="500" WidthRequest="300"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Text="Play" HeightRequest="50" Grid.Column="0" VerticalOptions="End" Clicked="ButtonPlay_OnClicked"/>
+                <Button Text="Pause" HeightRequest="50" Grid.Column="1" VerticalOptions="End" Clicked="ButtonPause_OnClicked"/>
+            </Grid>
+        </Grid>
+	    
     </Grid>
 
 </ContentPage>
